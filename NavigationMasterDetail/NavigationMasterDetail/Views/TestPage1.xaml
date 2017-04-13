@@ -1,6 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="NavigationMasterDetail.Views.TestPage1">
-  <Label Text="Test Page 1" VerticalOptions="Center" HorizontalOptions="Center" />
+             x:Class="NavigationMasterDetail.Views.TestPage1" BackgroundColor="Silver">
+  <!--<Label Text="Test Page 1" VerticalOptions="Center" HorizontalOptions="Center" FontSize="64" />-->
+    <ScrollView x:Name="scrollView" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+        <Label x:Name="MyLabel" Text="Test Page 1"  FontSize="24" />
+    </ScrollView>
 </ContentPage>

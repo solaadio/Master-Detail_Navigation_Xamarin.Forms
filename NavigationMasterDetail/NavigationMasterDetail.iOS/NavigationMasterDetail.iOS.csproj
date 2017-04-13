@@ -144,31 +144,31 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\itemIcon1.png" />
+    <BundleResource Include="Resources\itemIcon1.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\itemIcon2.png" />
+    <BundleResource Include="Resources\itemIcon2.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\itemIcon3.png" />
+    <BundleResource Include="Resources\itemIcon3.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\itemIcon4.png" />
+    <BundleResource Include="Resources\itemIcon4.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\itemIcon5.png" />
+    <BundleResource Include="Resources\itemIcon5.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\itemIcon6.png" />
+    <BundleResource Include="Resources\itemIcon6.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\itemIcon7.png" />
+    <BundleResource Include="Resources\itemIcon7.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\itemIcon8.png" />
+    <BundleResource Include="Resources\itemIcon8.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\itemIcon9.png" />
+    <BundleResource Include="Resources\itemIcon9.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Forms.2.0.0.6482\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.0.0.6482\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />

@@ -1,8 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:MSCommunity_Xamarin"
-             x:Class="NavigationMasterDetail.MainPage">
+                  x:Class="NavigationMasterDetail.MainPage">
 
   <MasterDetailPage.Master>
     <ContentPage Title="Menu"
@@ -17,7 +16,7 @@
         <StackLayout BackgroundColor="#e74c3c"
                      HeightRequest="75">
 
-          <Label Text="Some Text title"
+          <Label Text="Club One App"
                  FontSize="20"
                  VerticalOptions="CenterAndExpand"
                  TextColor="White"

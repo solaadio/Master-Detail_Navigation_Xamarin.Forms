@@ -10,6 +10,15 @@ namespace NavigationMasterDetail.Views {
     public partial class TestPage1 : ContentPage {
         public TestPage1() {
             InitializeComponent();
+
+
+            string myText = string.Empty;
+            for (int i = 0; i < 200; i++)
+            {
+               myText = myText + "Button " + i + "; ";
+            }
+            MyLabel.Text = myText;
+
         }
     }
 }
