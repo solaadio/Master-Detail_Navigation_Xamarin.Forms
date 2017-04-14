@@ -2,5 +2,5 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="NavigationMasterDetail.Views.TestPage3" BackgroundColor="Yellow">
-  <Label Text="Test Page 3" VerticalOptions="Center" HorizontalOptions="Center" FontSize="64" />
+    <Label x:Name="PageLabel" Text="Test Page 3" VerticalOptions="Center" HorizontalOptions="Center" FontSize="64" />
 </ContentPage>

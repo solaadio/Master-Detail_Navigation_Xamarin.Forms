@@ -12,13 +12,14 @@ namespace NavigationMasterDetail.Views {
             InitializeComponent();
 
 
-            string myText = string.Empty;
-            for (int i = 0; i < 200; i++)
-            {
-               myText = myText + "Button " + i + "; ";
-            }
-            MyLabel.Text = myText;
+           
+         
 
+        }
+
+        public string LabelTitle
+        {
+            get { return MyLabel.Text; } set { MyLabel.Text = value; }
         }
     }
 }

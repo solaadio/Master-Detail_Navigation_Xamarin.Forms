@@ -20,10 +20,6 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>MinimumOSVersion</key>
-	<string>10.3</string>
-	<key>CFBundleDisplayName</key>
-	<string>NavigationMasterDetail</string>
 	<key>CFBundleIdentifier</key>
 	<string>com.logion.vat.toolbox</string>
 	<key>CFBundleVersion</key>
@@ -47,5 +43,9 @@
 	<string>LaunchScreen</string>
 	<key>CFBundleShortVersionString</key>
 	<string></string>
+	<key>MinimumOSVersion</key>
+	<string>8.1</string>
+	<key>CFBundleDisplayName</key>
+	<string>Club One</string>
 </dict>
 </plist>

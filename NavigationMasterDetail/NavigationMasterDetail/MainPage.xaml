@@ -3,64 +3,103 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                   x:Class="NavigationMasterDetail.MainPage">
 
-  <MasterDetailPage.Master>
-    <ContentPage Title="Menu"
+    <MasterDetailPage.Master>
+        <ContentPage Title="Menu"
                  BackgroundColor="#e8e8e8">
 
-      <StackLayout Orientation="Vertical">
-        
-        <!-- 
+            <StackLayout Orientation="Vertical">
+
+                <!-- 
              This StackLayout you can use for other
              data that you want to have in your menu drawer
         -->
-        <StackLayout BackgroundColor="#e74c3c"
+                <StackLayout BackgroundColor="#e74c3c"
                      HeightRequest="75">
 
-          <Label Text="Club One App"
+                    <Label Text="Club One App"
                  FontSize="20"
                  VerticalOptions="CenterAndExpand"
                  TextColor="White"
                  HorizontalOptions="Center"/>
-        </StackLayout>
+                </StackLayout>
 
-        <ListView x:Name="navigationDrawerList"
+                <ListView x:Name="navigationDrawerList"
+                          HeightRequest="230"
                   RowHeight="60"
                   SeparatorVisibility="None"
                   BackgroundColor="#e8e8e8"
                   ItemSelected="OnMenuItemSelected">
 
-          <ListView.ItemTemplate>
-            <DataTemplate>
-              <ViewCell>
-                
-                <!-- Main design for our menu items -->
-                <StackLayout VerticalOptions="FillAndExpand"
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+
+                                <!-- Main design for our menu items -->
+                                <StackLayout VerticalOptions="FillAndExpand"
                              Orientation="Horizontal"
                              Padding="20,10,0,10"
                              Spacing="20">
 
-                  <Image Source="{Binding Icon}"
+                                    <Image Source="{Binding Icon}"
                          WidthRequest="40"
                          HeightRequest="40"
                          VerticalOptions="Center" />
 
-                  <Label Text="{Binding Title}"
+                                    <Label Text="{Binding Title}"
                          FontSize="Medium"
                          VerticalOptions="Center"
                          TextColor="Black"/>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                <StackLayout BackgroundColor="Black"
+                             HeightRequest="1">
+
+                    <Label Text=""
+                           FontSize="2"
+                           VerticalOptions="CenterAndExpand"
+                           TextColor="White"
+                           HorizontalOptions="Center"/>
                 </StackLayout>
-              </ViewCell>
-            </DataTemplate>
-          </ListView.ItemTemplate>
-        </ListView>
-      </StackLayout>
+                <ListView x:Name="ChildNavigationDrawerList"
+                    RowHeight="40"
+                    SeparatorVisibility="Default"
+                    BackgroundColor="#e8e8e8"
+                    ItemSelected="OnChildMenuItemSelected">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
 
-    </ContentPage>
-  </MasterDetailPage.Master>
+                                <!-- Main design for our menu items -->
+                                <StackLayout VerticalOptions="FillAndExpand"
+                                       Orientation="Horizontal"
+                                       Padding="30,10,0,10"
+                                       Spacing="20">
 
-  <MasterDetailPage.Detail>
-    <NavigationPage>
+                                    <Image Source="{Binding Icon}"
+                                     WidthRequest="40"
+                                     HeightRequest="40"
+                                     VerticalOptions="Center" />
 
-    </NavigationPage>
-  </MasterDetailPage.Detail>
+                                    <Label Text="{Binding Title}"
+                                     FontSize="Medium"
+                                     VerticalOptions="Center"
+                                     TextColor="Black"/>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+
+        </ContentPage>
+    </MasterDetailPage.Master>
+
+    <MasterDetailPage.Detail>
+        <NavigationPage>
+
+        </NavigationPage>
+    </MasterDetailPage.Detail>
 </MasterDetailPage>
