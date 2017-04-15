@@ -6,16 +6,19 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 
-namespace NavigationMasterDetail.Views {
-    public partial class TestPage3 : ContentPage {
-        public TestPage3() {
-            InitializeComponent();
-        }
+namespace NavigationMasterDetail.Views
+{
+	public partial class TestPage3 : ContentPage
+	{
+		public TestPage3()
+		{
+			InitializeComponent();
+		}
 
-        public string LabelTitle
-        {
-            get => PageLabel.Text;
-            set => PageLabel.Text = value;
-        }
-    }
+		public string LabelTitle
+		{
+			get { return PageLabel.Text; }
+			set { PageLabel.Text = value; }
+		}
+	}
 }

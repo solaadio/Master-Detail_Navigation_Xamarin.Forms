@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                   x:Class="NavigationMasterDetail.MainPage">
@@ -7,14 +7,26 @@
         <ContentPage Title="Menu"
                  BackgroundColor="#e8e8e8">
 
-            <StackLayout Orientation="Vertical">
+<!--            <StackLayout Orientation="Vertical">-->
 
                 <!-- 
              This StackLayout you can use for other
              data that you want to have in your menu drawer
         -->
+
+			<Grid>
+			  <Grid.RowDefinitions>
+				<RowDefinition Height="auto"/>
+			    <RowDefinition Height="*" />
+				<RowDefinition Height="auto"/>
+			    <RowDefinition Height="*" />
+			  </Grid.RowDefinitions>
+
+  
                 <StackLayout BackgroundColor="#e74c3c"
-                     HeightRequest="75">
+                     HeightRequest="75"
+					Grid.Row="0"
+					>
 
                     <Label Text="Club One App"
                  FontSize="20"
@@ -24,26 +36,24 @@
                 </StackLayout>
 
                 <ListView x:Name="navigationDrawerList"
-                          HeightRequest="230"
+					Grid.Row="1"
                   RowHeight="60"
                   SeparatorVisibility="None"
                   BackgroundColor="#e8e8e8"
+				CachingStrategy = "RecycleElement"
                   ItemSelected="OnMenuItemSelected">
-
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
-
                                 <!-- Main design for our menu items -->
                                 <StackLayout VerticalOptions="FillAndExpand"
                              Orientation="Horizontal"
                              Padding="20,10,0,10"
                              Spacing="20">
-
                                     <Image Source="{Binding Icon}"
-                         WidthRequest="40"
-                         HeightRequest="40"
-                         VerticalOptions="Center" />
+				                         WidthRequest="40"
+				                         HeightRequest="40"
+				                         VerticalOptions="Center" />
 
                                     <Label Text="{Binding Title}"
                          FontSize="Medium"
@@ -55,8 +65,8 @@
                     </ListView.ItemTemplate>
                 </ListView>
                 <StackLayout BackgroundColor="Black"
-                             HeightRequest="1">
-
+                             HeightRequest="1"
+					Grid.Row="2">
                     <Label Text=""
                            FontSize="2"
                            VerticalOptions="CenterAndExpand"
@@ -64,9 +74,11 @@
                            HorizontalOptions="Center"/>
                 </StackLayout>
                 <ListView x:Name="ChildNavigationDrawerList"
-                    RowHeight="40"
+                    RowHeight="60"
                     SeparatorVisibility="Default"
                     BackgroundColor="#e8e8e8"
+					CachingStrategy = "RecycleElement"
+					Grid.Row="3"
                     ItemSelected="OnChildMenuItemSelected">
                     <ListView.ItemTemplate>
                         <DataTemplate>
@@ -75,7 +87,7 @@
                                 <!-- Main design for our menu items -->
                                 <StackLayout VerticalOptions="FillAndExpand"
                                        Orientation="Horizontal"
-                                       Padding="30,10,0,10"
+                                       Padding="20,10,0,10"
                                        Spacing="20">
 
                                     <Image Source="{Binding Icon}"
@@ -92,8 +104,8 @@
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
-            </StackLayout>
-
+<!--            </StackLayout>-->
+</Grid>
         </ContentPage>
     </MasterDetailPage.Master>
 

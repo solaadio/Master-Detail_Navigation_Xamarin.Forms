@@ -12,8 +12,9 @@ namespace NavigationMasterDetail.Views {
             InitializeComponent();
         }
 
-        public string LabelTitle { get => PageLabel.Text;
-            set => PageLabel.Text = value;
+		public string LabelTitle { 
+			get { return PageLabel.Text; }
+			set { PageLabel.Text = value; }
         }
     }
 }
